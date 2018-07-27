@@ -1,8 +1,9 @@
-package jedis.test;
+package jedis.connection;
 
 import java.util.LinkedList;
 import java.util.List;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -31,6 +32,9 @@ public class JedisJava {
         pool = new ShardedJedisPool(config, list);
     }
     public static void main(String[] args) {
+
+        SpringApplication.run(JedisJava.class, args);
+
         ShardedJedis jedis = pool.getResource();
         String keys = "myname";
         jedis.set(keys, "lxr");

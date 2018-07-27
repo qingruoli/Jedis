@@ -10,6 +10,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.3.RELEASE</version> <!-- lookup parent from repository -->
 	</parent>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -43,4 +44,7 @@
 			<artifactId>jedis</artifactId>
 		</dependency>
 	</dependencies>
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
 </project>
